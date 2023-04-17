@@ -1,0 +1,21 @@
+<h2>Food Details</h2>
+
+<hr />
+<div *ngIf="food">
+    <div>
+        <label><b>Food Name: </b></label> {{food.foodName}}
+    </div>
+    <div>
+        <label><b>Price: </b></label> {{food.price}}
+    </div>
+    <div>
+        <label><b>Description: </b></label> {{food.description}}
+    </div>
+    <div>
+        <label><b>Availability: </b></label> {{food.status}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Food List</button><br>

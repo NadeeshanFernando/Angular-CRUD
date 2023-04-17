@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Food List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let food of foods | async">
+                    <td>{{food.foodName}}</td>
+                    <td>{{food.price}}</td>
+                    <td>{{food.description}}</td>
+                    <td>{{food.status}}</td>
+                    <td>
+                        <button (click)="deleteFood(food.id)" class="btn btn-danger">Delete</button>
+                        <button (click)="updateFood(food.id)" class="btn btn-success" style="margin-left: 10px">Update</button>
+                        <button (click)="foodDetails(food.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
